@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<racks>
+  <rack name="My rack (24U)" size="24">
+    <mount offset="0" size="3" label="UPS 3000" />
+    <mount offset="20" size="1" label="Switch" />
+    <mount offset="15" size="1" label="PC1" />
+    <mount offset="13" size="1" label="PC2" />
+    <mount offset="11" size="1" label="PC3" />
+
+    <net member="0,20,15,13,11" side="right" label="Power Line" color="red" />
+    <net member="20,15,13,11" side="left" label="192.168.2.0/24" color="blue" />
+    <net member="20" side="right" label="to Next Rack" />
+  </rack>
+</racks>
+
