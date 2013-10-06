@@ -40,8 +40,8 @@ Rackplan()の呼び出し方は、
  XML
 ------
 
-XMLは、<racks> エンティティの中に、<rack>を複数定義できます。  
-さらに、<rack> は <mount> と <net> を0個以上持つことが出来ます。
+XMLは、racks エンティティの中に、rackを複数定義できます。  
+さらに、rack は mount と net を0個以上持つことが出来ます。
 
 ### XMLのサンプル ###
 
