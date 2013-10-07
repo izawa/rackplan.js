@@ -1,0 +1,12 @@
+1U box size:
+height 19px
+width 296px
+
+1U rack size:
+height 23px (1U box +- 2px margin)
+width 300px (1U box +- 2px margin)
+
+canvas size:
+height rack height + 10 (5px margin x2 (top&bottom))
+width 400px (50px margin x 2(left&right))
+
