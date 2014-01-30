@@ -6,7 +6,7 @@ XMLでラック情報を記述して、JSでCanvasを生成します。
 必要ライブラリ
 -------------
 + jQuery [http://jquery.com/](http://jquery.com/)
-+ jCanvas [http://http://calebevans.me/projects/jcanvas/](http://http://calebevans.me/projects/jcanvas/)
++ jCanvas [http://calebevans.me/projects/jcanvas/](http://calebevans.me/projects/jcanvas/)
 
 推奨ライブラリ
 -------------
