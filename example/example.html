@@ -29,6 +29,11 @@
   <body>
     <section class="container">
       <article class="row" id="main">
+        <script type="text/javascript" defer>
+          $(function () {
+            Rackplan("#main", "example1.xml");
+          });
+        </script>
       </article>
     </section>
 
@@ -37,11 +42,7 @@
     <script src="https://rawgithub.com/twbs/bootstrap/master/dist/js/bootstrap.min.js"></script>
     <script src="https://rawgithub.com/caleb531/jcanvas/master/jcanvas.min.js"></script>
     <script src="https://rawgithub.com/izawa/rackplan.js/master/js/rack.min.js"></script>
-    <script type="text/javascript" defer>
-      $(function () {
-        Rackplan("#main", "example1.xml");
-      });
-    </script>
+
     <script>
       $(function () { later.run(); });
     </script>
