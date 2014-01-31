@@ -38,7 +38,12 @@
     <script src="https://rawgithub.com/caleb531/jcanvas/master/jcanvas.min.js"></script>
     <script src="https://rawgithub.com/izawa/rackplan.js/master/js/rack.min.js"></script>
     <script type="text/javascript" defer>
-      Rackplan("#main", "example1.xml");
+      $(function () {
+        Rackplan("#main", "example1.xml");
+      });
+    </script>
+    <script>
+      $(function () { later.run(); });
     </script>
   </body>
 </html>
