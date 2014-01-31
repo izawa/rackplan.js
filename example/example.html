@@ -10,6 +10,20 @@
         margin-top: 60px;
       }
     </style>
+    <script>
+      later = {
+        _queue: [],
+        ready: function (func) {
+          if (typeof func == 'function') later._queue.push(func);
+          return later;
+        },
+        run: function () {
+          for (var i = 0, l = later._queue.length; i < l; i++) later._queue[i]();
+          later._queue = [];
+        }
+      }
+      jQuery = $ = later.ready;
+    </script>
   </head>
 
   <body>
