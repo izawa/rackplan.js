@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap test</title>
+    <link rel="stylesheet" href="https://rawgithub.com/twbs/bootstrap/master/dist/css/bootstrap.css" media="screen">
+    <style>
+      body {
+        margin-top: 60px;
+      }
+    </style>
+    <script>
+      later = {
+        _queue: [],
+        ready: function (func) {
+          if (typeof func == 'function') later._queue.push(func);
+          return later;
+        },
+        run: function () {
+          for (var i = 0, l = later._queue.length; i < l; i++) later._queue[i]();
+          later._queue = [];
+        }
+      }
+      jQuery = $ = later.ready;
+    </script>
+  </head>
+
+  <body>
+    <section class="container">
+      <article class="row" id="main">
+        <script type="text/javascript" defer>
+          $(function () {
+            Rackplan("#main", "example1.xml");
+          });
+        </script>
+      </article>
+    </section>
+
+    <!-- place bottom  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://rawgithub.com/twbs/bootstrap/master/dist/js/bootstrap.min.js"></script>
+    <script src="https://rawgithub.com/caleb531/jcanvas/master/jcanvas.min.js"></script>
+    <script src="https://rawgithub.com/izawa/rackplan.js/master/js/rack.min.js"></script>
+
+    <script>
+      $(function () { later.run(); });
+    </script>
+  </body>
+</html>
