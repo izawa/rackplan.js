@@ -57,7 +57,8 @@
 	    //                              color: color, (optional)
 	    //                              label: label,  (optional)
             //                              label_color: label_color  (optional)}
-            //  racks_config[rackname] = {size: size}
+            //  racks_config[rackname] = {size: size
+            //                            name_color: color (optional)}
             //  nets[rack_name]["left"|"right"][line]  = {color: color,  (optional)
 	    //                                            label: label,  (optional)
             //                                  member: [member]}
@@ -66,7 +67,8 @@
                 var rack_name = $(xml).find("rack").eq(i).attr("name");
                 racks[rack_name] = [];
 		racks_config[rack_name] = {
-		    "size":$(xml).find("rack").eq(i).attr("size")
+		    "size":$(xml).find("rack").eq(i).attr("size"),
+		    "name_color":$(xml).find("rack").eq(i).attr("name_color")
 		    };
                 nets[rack_name] = {"left":[] ,"right":[]};
                 for(var j=0; j <= $(xml).find("rack").eq(i).find("mount").length-1; j++) {
@@ -254,7 +256,7 @@
         function draw() {
             for(var i in racks) {
                 var newDiv = $('<div/>', {"class": mydefined(cssclass) ? cssclass : 'col-md-5 col-sm-8'});
-                newDiv.append("<h1>" + i);
+                newDiv.append($('<h1>').text(i).css("color", mydefined(racks_config[i]["name_color"]) ? racks_config[i]["name_color"] : "#000"));
 		var rackheight = racks_config[i]["size"] * 19 + racks_config[i]["size"] * 4 + 10;
                 var newCanvas = 
                         $('<canvas width="400" height="' + rackheight + '"/>').width(400).height(rackheight);
